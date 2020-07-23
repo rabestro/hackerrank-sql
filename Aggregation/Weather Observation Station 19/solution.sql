@@ -1,4 +1,4 @@
-SELECT ROUND(SQRT(POWER(c - a) + POWER(d - b)), 4)
+SELECT ROUND(SQRT(POWER(c - a, 2) + POWER(d - b, 2)), 4)
 FROM (
     SELECT 
         MIN(lat_n) AS a, 
