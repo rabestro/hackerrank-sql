@@ -1,10 +1,10 @@
-SELECT hacker_id, name, SUM(max_score)
+SELECT h.hacker_id, h.name, SUM(max_score) AS total_score
 FROM (
-    SELECT hacker_id, name, challenge_id, max_score
-    FROM hackers
-    NATURAL JOIN (
-        SELECT hacker_id, challenge_id, MAX(score) AS max_score
-        FROM Submissions
-        GROUP BY hacker_id, challenge_id
-    ) 
-) GROUP BY challenge_id ORDER BY 3;
+    SELECT hacker_id, challenge_id, MAX(score) AS max_score
+    FROM submissions
+    GROUP BY hacker_id, challenge_id
+) challenges, hackers h
+WHERE challenges.hacker_id = h.hacker_id (+)
+GROUP BY h.hacker_id, h.name
+HAVING SUM(max_score) > 0
+ORDER BY total_score DESC, h.hacker_id ASC;
