@@ -1,10 +1,10 @@
-SELECT n, 
-CASE 
-WHEN p IS NULL THEN 'Root'
-WHEN c IS NULL THEN 'Leaf'
-ELSE 'Inner'
-END
-FROM bst
-LEFT OUTER JOIN (SELECT DISTINCT p AS c FROM bst) 
-ON n = c
-ORDER BY n;
+select n,
+    case
+        when p is null then 'Root'
+        when c is null then 'Leaf'
+        else 'Inner'
+    end
+from bst
+left outer join (select distinct p as c from bst)
+    on n = c
+order by n;
