@@ -1,4 +1,8 @@
-SELECT earning, COUNT(earning) 
-FROM (SELECT salary * months AS earning FROM employee)
-GROUP BY earning
-HAVING earning = (SELECT MAX(salary * months) FROM employee);
+select earning, count(earning)
+from (
+    select salary * months as earning
+    from employee)
+group by earning
+having earning = (
+    select max(salary * months)
+    from employee);
