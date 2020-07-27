@@ -1,8 +1,9 @@
-select Submissions.hacker_id, name from Submissions
+select Submissions.hacker_id, name
+from Submissions
 join Challenges
-on Submissions.challenge_id = Challenges.challenge_id
+    on Submissions.challenge_id = Challenges.challenge_id
 join Hackers
-on Submissions.hacker_id = Hackers.hacker_id
+    on Submissions.hacker_id = Hackers.hacker_id
 where score = (
     select score
     from Difficulty
