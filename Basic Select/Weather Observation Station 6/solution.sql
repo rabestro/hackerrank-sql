@@ -1,1 +1,3 @@
-SELECT DISTINCT CITY FROM STATION WHERE REGEXP_LIKE (CITY, '^[aeiou]', 'i');
+select distinct city
+from station
+where regexp_like (city, '^[aeiou]', 'i');

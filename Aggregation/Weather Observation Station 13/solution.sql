@@ -1,4 +1,4 @@
-SELECT 
-  ROUND(SUM(lat_n), 4) 
-FROM station 
-WHERE lat_n BETWEEN 38.7880 AND 137.2345;
+select
+  round(sum(lat_n), 4)
+from station
+where lat_n between 38.7880 and 137.2345;

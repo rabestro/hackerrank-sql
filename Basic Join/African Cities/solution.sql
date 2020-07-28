@@ -1,5 +1,5 @@
-SELECT city.name
-FROM city
-JOIN country
-ON city.countrycode = country.code
-WHERE continent = 'Africa';
+select city.name
+from city
+join country
+    on city.countrycode = country.code
+where continent = 'Africa';

@@ -1,2 +1,2 @@
-SELECT CEIL(AVG(salary) - AVG(REPLACE(salary, '0')))
-FROM employees;
+select ceil(avg(salary) - avg(replace(salary, '0')))
+from employees;

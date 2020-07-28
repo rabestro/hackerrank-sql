@@ -1,4 +1,4 @@
-SELECT name 
-FROM students
-WHERE marks > 75
-ORDER BY SUBSTR(name, -3), id;
+select name
+from students
+where marks > 75
+order by substr(name, -3), id;
