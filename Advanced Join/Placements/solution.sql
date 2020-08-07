@@ -1,10 +1,10 @@
-select name
-from Friends
-join Packages ps
-    on Friends.id = ps.id
-join Packages pf
-    on Friend_ID = pf.id
-join Students st
-    on Friends.id = st.id
-where ps.Salary < pf.Salary
-order by pf.Salary
+SELECT name
+FROM friends
+         JOIN packages ps
+              ON friends.id = ps.id
+         JOIN packages pf
+              ON friend_id = pf.id
+         JOIN students st
+              ON friends.id = st.id
+WHERE ps.salary < pf.salary
+ORDER BY pf.salary

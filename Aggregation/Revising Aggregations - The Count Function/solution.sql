@@ -1,3 +1,3 @@
-select count(id)
-from city
-where population > 100000;
+SELECT count(id)
+FROM city
+WHERE population > 100000;

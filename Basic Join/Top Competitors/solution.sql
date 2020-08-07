@@ -1,14 +1,14 @@
-select Submissions.hacker_id, name
-from Submissions
-join Challenges
-    on Submissions.challenge_id = Challenges.challenge_id
-join Hackers
-    on Submissions.hacker_id = Hackers.hacker_id
-where score = (
-    select score
-    from Difficulty
-    where difficulty_level = Challenges.difficulty_level
+SELECT submissions.hacker_id, name
+FROM submissions
+         JOIN challenges
+              ON submissions.challenge_id = challenges.challenge_id
+         JOIN hackers
+              ON submissions.hacker_id = hackers.hacker_id
+WHERE score = (
+    SELECT score
+    FROM difficulty
+    WHERE difficulty_level = challenges.difficulty_level
 )
-group by Submissions.hacker_id, name
-having count(Submissions.challenge_id) > 1
-order by count(Submissions.challenge_id) desc, Submissions.hacker_id;
+GROUP BY submissions.hacker_id, name
+HAVING count(submissions.challenge_id) > 1
+ORDER BY count(submissions.challenge_id) DESC, submissions.hacker_id;

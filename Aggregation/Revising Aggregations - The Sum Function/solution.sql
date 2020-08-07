@@ -1,3 +1,3 @@
-select sum(population)
-from city
-where district = 'California';
+SELECT sum(population)
+FROM city
+WHERE district = 'California';

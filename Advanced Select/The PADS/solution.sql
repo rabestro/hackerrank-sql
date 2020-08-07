@@ -1,7 +1,7 @@
-select name || '(' || substr(occupation, 1, 1) || ')'
-from occupations
-order by 1;
-select 'There are a total of ' || count(name)  || ' ' || lower(occupation) || 's.'
-from occupations
-group by occupation
-order by count(name), occupation;
+SELECT name || '(' || substr(occupation, 1, 1) || ')'
+FROM occupations
+ORDER BY 1;
+SELECT 'There are a total of ' || count(name) || ' ' || lower(occupation) || 's.'
+FROM occupations
+GROUP BY occupation
+ORDER BY count(name), occupation;

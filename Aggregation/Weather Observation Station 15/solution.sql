@@ -1,7 +1,7 @@
-select round(max(long_w), 4)
-from station
-where lat_n = (
-  select max(lat_n)
-  from station
-  where lat_n < 137.2345
+SELECT round(max(long_w), 4)
+FROM station
+WHERE lat_n = (
+    SELECT max(lat_n)
+    FROM station
+    WHERE lat_n < 137.2345
 );

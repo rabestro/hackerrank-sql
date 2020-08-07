@@ -1,3 +1,3 @@
-select avg(population)
-from city
-where district = 'California';
+SELECT avg(population)
+FROM city
+WHERE district = 'California';

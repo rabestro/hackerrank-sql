@@ -1,4 +1,5 @@
-select name
-from Employee
-where salary > 2000 and months < 10
-order by employee_id;
+SELECT name
+FROM employee
+WHERE salary > 2000
+  AND months < 10
+ORDER BY employee_id;

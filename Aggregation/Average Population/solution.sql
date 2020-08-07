@@ -1,2 +1,2 @@
-select floor(avg(population))
-from city;
+SELECT floor(avg(population))
+FROM city;

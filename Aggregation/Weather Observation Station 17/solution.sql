@@ -1,7 +1,7 @@
-select round(long_w, 4)
-from station
-where lat_n = (
-    select min(lat_n)
-    from station
-    where lat_n > 38.7780
+SELECT round(long_w, 4)
+FROM station
+WHERE lat_n = (
+    SELECT min(lat_n)
+    FROM station
+    WHERE lat_n > 38.7780
 );

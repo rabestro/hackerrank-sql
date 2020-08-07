@@ -1,2 +1,2 @@
-select round(median(lat_n), 4)
-from station;
+SELECT round(median(lat_n), 4)
+FROM station;

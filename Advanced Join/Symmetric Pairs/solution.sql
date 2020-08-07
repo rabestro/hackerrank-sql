@@ -1,13 +1,13 @@
-select x, y
-from Functions
-where x = y
-group by x, y
-having count(*) > 1
-union all
-select distinct a.x, a.y
-from Functions a
-         join Functions b
-              on a.x = b.y and a.y = b.x
-where a.x < a.y
-order by x;
+SELECT x, y
+FROM functions
+WHERE x = y
+GROUP BY x, y
+HAVING count(*) > 1
+UNION ALL
+SELECT DISTINCT a.x, a.y
+FROM functions a
+         JOIN functions b
+              ON a.x = b.y AND a.y = b.x
+WHERE a.x < a.y
+ORDER BY x;
 

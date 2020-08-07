@@ -1,5 +1,5 @@
-select continent, floor(avg(city.population)) as "Average city populations"
-from city
-join country
-    on city.countrycode = country.code
-group by continent;
+SELECT continent, floor(avg(city.population)) AS "Average city populations"
+FROM city
+         JOIN country
+              ON city.countrycode = country.code
+GROUP BY continent;

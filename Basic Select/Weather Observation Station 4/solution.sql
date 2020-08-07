@@ -1,2 +1,2 @@
-select count(city) - count(distinct city)
-from station;
+SELECT count(city) - count(DISTINCT city)
+FROM station;
